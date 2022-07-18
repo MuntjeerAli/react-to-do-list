@@ -112,11 +112,12 @@ const App = () => {
           <button className='btnEdit' onClick = {() => updateList(id)}>Edit</button>
           <button className='btnDelete' onClick = {() => deleteList(id)}>Delete</button>
           </div>
-          
         </li>
+        
         );
       })}
     </ul>
+    
       </div>
     </div>
   )

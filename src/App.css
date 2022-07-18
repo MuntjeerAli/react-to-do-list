@@ -49,6 +49,7 @@ ul{
 }
 li{
   padding-bottom: 1rem;
+  text-transform: capitalize;
 }
 li .allList{
   display: flex;
