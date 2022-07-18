@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import './App.css';
 
 const getLocalStorageData = () => {
   return localStorage.getItem('things') ? JSON.parse(localStorage.getItem('things')) : [];
@@ -66,10 +67,12 @@ const App = () => {
 
 
   return (
-    <>
-    <form onSubmit={submitHandler}>
-      <div>
-        <label htmlFor='title'>
+    <div className='mainContent'>
+      <h1>Market List</h1>
+      <div className='content'>
+      <form onSubmit={submitHandler} className='forms'>
+      <div className='titleField'>
+        <label htmlFor='title' className='title'>
           Title:
         </label>
         <input type="text" 
@@ -77,38 +80,45 @@ const App = () => {
         name='title' 
         placeholder='Title' 
         value={list.title} 
-        onChange={changeHandler} />
+        onChange={changeHandler} 
+        className='inputField' />
       </div>
       <br/>
       <div>
-        <label htmlFor='price'>
+        <label htmlFor='price' className='label'>
           Price:
         </label>
         <input type="text" 
         id='price' name='price' 
         placeholder='Price' 
         value={list.price} 
-        onChange={changeHandler} />
+        onChange={changeHandler}
+        className='inputField' />
       </div>
       <br/>
-      <button type='submit'>{isEditing ? 'Update' : 'Add'}</button>
+      <button type='submit' className='btnAdd'>{isEditing ? 'Update' : 'Add'}</button>
     </form>
-    <ul>
+    <ul className='content'>
       {things.map((item) => {
 
         const {id, title, price} = item;
         return(
-        <li key={id}>
+        <li key={id} className='lists'>
+          <div className='allList'>
           <h2>{title}</h2>
           <h2>{price}</h2>
-          <button onClick = {() => updateList(id)}>Edit</button>
-          <button onClick = {() => deleteList(id)}>Delete</button>
+          </div>
+          <div className='btns'>
+          <button className='btnEdit' onClick = {() => updateList(id)}>Edit</button>
+          <button className='btnDelete' onClick = {() => deleteList(id)}>Delete</button>
+          </div>
+          
         </li>
         );
       })}
     </ul>
-    
-    </>
+      </div>
+    </div>
   )
 }
 

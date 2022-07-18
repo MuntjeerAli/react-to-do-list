@@ -1,38 +1,85 @@
-.App {
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainContent{
+  height: 100%;
   text-align: center;
+  font-size: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content{
+  width: 70%;
+  background-color: white;
+  align-self: center;
+  display: block;
+  margin: 120px auto;
+  box-shadow: 5px 10px 20px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.forms{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input{
+  height: 2rem;
+  width: 50%;
+  font-size: 1.5rem;
+  border: 2px solid black;
+}
+
+.btnAdd{
+  height: 2rem;
+  width: 25%;
+  border-radius: 5px;
+  background-color: blue;
+  color: aliceblue;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+ul{
+  margin: 0;
+  list-style-type: none;
+  padding: 1rem;
+}
+li{
+  padding-bottom: 1rem;
+}
+li .allList{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnEdit{
+  height: 2rem;
+  width: 25%;
+  border-radius: 5px;
+  background-color: teal;
+  color: aliceblue;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btnDelete{
+  height: 2rem;
+  width: 25%;
+  border-radius: 5px;
+  background-color: red;
+  color: aliceblue;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
 }
