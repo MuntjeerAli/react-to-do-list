@@ -83,3 +83,14 @@ li .allList{
   border: none;
   cursor: pointer;
 }
+
+/* Responsiveness */
+
+@media screen and (max-width: 400px){
+  input{
+    width: 70%;
+  }
+  .content{
+    width: 100%;
+  }
+}
