@@ -73,7 +73,7 @@ const App = () => {
       <form onSubmit={submitHandler} className='forms'>
       <div className='titleField'>
         <label htmlFor='title' className='title'>
-          Title:
+          Title: 
         </label>
         <input type="text" 
         id='title' 
@@ -86,7 +86,7 @@ const App = () => {
       <br/>
       <div>
         <label htmlFor='price' className='label'>
-          Price:
+          Price (₹): 
         </label>
         <input type="text" 
         id='price' name='price' 
@@ -106,7 +106,7 @@ const App = () => {
         <li key={id} className='lists'>
           <div className='allList'>
           <h2>{title}</h2>
-          <h2>{price}</h2>
+          <h2>₹ {price}</h2>
           </div>
           <div className='btns'>
           <button className='btnEdit' onClick = {() => updateList(id)}>Edit</button>
